@@ -13,6 +13,8 @@
 		8B3D14072A23730000F0EF6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3D14062A23730000F0EF6E /* Preview Assets.xcassets */; };
 		8B3D14092A23730000F0EF6E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D14082A23730000F0EF6E /* Persistence.swift */; };
 		8B3D140C2A23730000F0EF6E /* Todos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D140A2A23730000F0EF6E /* Todos.xcdatamodeld */; };
+		8B3D14142A23740D00F0EF6E /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D14132A23740D00F0EF6E /* AddTodoView.swift */; };
+		8B3D14162A2375F200F0EF6E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D14152A2375F200F0EF6E /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		8B3D14062A23730000F0EF6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8B3D14082A23730000F0EF6E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		8B3D140B2A23730000F0EF6E /* Todos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Todos.xcdatamodel; sourceTree = "<group>"; };
+		8B3D14132A23740D00F0EF6E /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
+		8B3D14152A2375F200F0EF6E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				8B3D13FF2A23730000F0EF6E /* TodosApp.swift */,
-				8B3D14012A23730000F0EF6E /* ContentView.swift */,
+				8B3D14122A2373EE00F0EF6E /* Views */,
 				8B3D14032A23730000F0EF6E /* Assets.xcassets */,
 				8B3D14082A23730000F0EF6E /* Persistence.swift */,
 				8B3D140A2A23730000F0EF6E /* Todos.xcdatamodeld */,
@@ -71,6 +75,16 @@
 				8B3D14062A23730000F0EF6E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8B3D14122A2373EE00F0EF6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B3D14012A23730000F0EF6E /* ContentView.swift */,
+				8B3D14132A23740D00F0EF6E /* AddTodoView.swift */,
+				8B3D14152A2375F200F0EF6E /* MainView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,9 +158,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B3D14092A23730000F0EF6E /* Persistence.swift in Sources */,
+				8B3D14162A2375F200F0EF6E /* MainView.swift in Sources */,
 				8B3D14022A23730000F0EF6E /* ContentView.swift in Sources */,
 				8B3D14002A23730000F0EF6E /* TodosApp.swift in Sources */,
 				8B3D140C2A23730000F0EF6E /* Todos.xcdatamodeld in Sources */,
+				8B3D14142A23740D00F0EF6E /* AddTodoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,8 +297,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,8 +326,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
