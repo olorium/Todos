@@ -9,14 +9,20 @@ import SwiftUI
 
 @main
 struct TodosApp: App {
+	@StateObject var launchScreenState = LaunchScreenStateManager()
+	
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-			MainView()
-				.environment(\.managedObjectContext, persistenceController.container.viewContext)
-//            ContentView()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+			ZStack {
+				MainView()
+					.environment(\.managedObjectContext, persistenceController.container.viewContext)
+
+				if launchScreenState.state != .finished {
+					LaunchScreenView()
+				}
+			}.environmentObject(launchScreenState)
         }
     }
 }

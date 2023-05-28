@@ -10,6 +10,7 @@ import CoreData
 
 struct MainView: View {
 	// MARK: - Properties
+	@EnvironmentObject private var launchScreenState: LaunchScreenStateManager
 	@Environment(\.managedObjectContext) var managedObjectContext
 	@FetchRequest(entity: Item.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Item.name, ascending: true)], animation: .default)
 	private var items: FetchedResults<Item>
@@ -18,28 +19,39 @@ struct MainView: View {
     // MARK: - Body
     var body: some View {
 		NavigationView {
-			List {
-				ForEach(items, id: \.self) { item in
-					HStack {
-						Text(item.name ?? "")
-						Spacer()
-						Text(item.priority ?? "")
-					}
+			ZStack {
+				if items.count == 0 {
+					EmptyListView()
 				}
-				.onDelete(perform: deleteItems)
+				List {
+					ForEach(items, id: \.self) { item in
+						HStack {
+							Text(item.name ?? "")
+							Spacer()
+							Text(item.priority ?? "")
+						}
+					}
+					.onDelete(perform: deleteItems)
+				}
+				.navigationBarTitle("Todo", displayMode: .inline)
+				.navigationBarItems(
+					leading: EditButton(),
+					trailing:
+						Button(action: {
+							showingAddTodoView = true
+						}, label: {
+							Image(systemName: "plus")
+						})
+						.sheet(isPresented: $showingAddTodoView) { AddTodoView(showAddTodoView: $showingAddTodoView)}
+						.environment(\.managedObjectContext, managedObjectContext)
+				)
+				.onAppear {
+					Task {
+						try? await Task.sleep(nanoseconds: 1000_000)
+						self.launchScreenState.dismiss()
+					}
 			}
-			.navigationBarTitle("Todo", displayMode: .inline)
-			.navigationBarItems(
-				leading: EditButton(),
-				trailing:
-					Button(action: {
-						showingAddTodoView = true
-					}, label: {
-						Image(systemName: "plus")
-					})
-					.sheet(isPresented: $showingAddTodoView) { AddTodoView(showAddTodoView: $showingAddTodoView)}
-					.environment(\.managedObjectContext, managedObjectContext)
-			)
+			}
 		}
     }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B0C4F462A23F16500AFBEE7 /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C4F452A23F16500AFBEE7 /* EmptyListView.swift */; };
 		8B3D14002A23730000F0EF6E /* TodosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D13FF2A23730000F0EF6E /* TodosApp.swift */; };
 		8B3D14022A23730000F0EF6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D14012A23730000F0EF6E /* ContentView.swift */; };
 		8B3D14042A23730000F0EF6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3D14032A23730000F0EF6E /* Assets.xcassets */; };
@@ -15,9 +16,13 @@
 		8B3D140C2A23730000F0EF6E /* Todos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D140A2A23730000F0EF6E /* Todos.xcdatamodeld */; };
 		8B3D14142A23740D00F0EF6E /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D14132A23740D00F0EF6E /* AddTodoView.swift */; };
 		8B3D14162A2375F200F0EF6E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D14152A2375F200F0EF6E /* MainView.swift */; };
+		8B3D141B2A23D82700F0EF6E /* LaunchScreenStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D141A2A23D82700F0EF6E /* LaunchScreenStep.swift */; };
+		8B3D141D2A23D87500F0EF6E /* LaunchScreenStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D141C2A23D87500F0EF6E /* LaunchScreenStateManager.swift */; };
+		8B3D141F2A23DA2D00F0EF6E /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D141E2A23DA2D00F0EF6E /* LaunchScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B0C4F452A23F16500AFBEE7 /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
 		8B3D13FC2A23730000F0EF6E /* Todos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3D13FF2A23730000F0EF6E /* TodosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosApp.swift; sourceTree = "<group>"; };
 		8B3D14012A23730000F0EF6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,6 +32,9 @@
 		8B3D140B2A23730000F0EF6E /* Todos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Todos.xcdatamodel; sourceTree = "<group>"; };
 		8B3D14132A23740D00F0EF6E /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 		8B3D14152A2375F200F0EF6E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8B3D141A2A23D82700F0EF6E /* LaunchScreenStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenStep.swift; sourceTree = "<group>"; };
+		8B3D141C2A23D87500F0EF6E /* LaunchScreenStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenStateManager.swift; sourceTree = "<group>"; };
+		8B3D141E2A23DA2D00F0EF6E /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				8B3D13FF2A23730000F0EF6E /* TodosApp.swift */,
+				8B3D14192A23D80500F0EF6E /* LaunchScreen */,
 				8B3D14122A2373EE00F0EF6E /* Views */,
 				8B3D14032A23730000F0EF6E /* Assets.xcassets */,
 				8B3D14082A23730000F0EF6E /* Persistence.swift */,
@@ -83,8 +92,19 @@
 				8B3D14012A23730000F0EF6E /* ContentView.swift */,
 				8B3D14132A23740D00F0EF6E /* AddTodoView.swift */,
 				8B3D14152A2375F200F0EF6E /* MainView.swift */,
+				8B0C4F452A23F16500AFBEE7 /* EmptyListView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8B3D14192A23D80500F0EF6E /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8B3D141A2A23D82700F0EF6E /* LaunchScreenStep.swift */,
+				8B3D141C2A23D87500F0EF6E /* LaunchScreenStateManager.swift */,
+				8B3D141E2A23DA2D00F0EF6E /* LaunchScreenView.swift */,
+			);
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +114,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B3D140F2A23730000F0EF6E /* Build configuration list for PBXNativeTarget "Todos" */;
 			buildPhases = (
+				8B0C4EE62A23DCFB00AFBEE7 /* ShellScript */,
 				8B3D13F82A23730000F0EF6E /* Sources */,
 				8B3D13F92A23730000F0EF6E /* Frameworks */,
 				8B3D13FA2A23730000F0EF6E /* Resources */,
@@ -152,17 +173,43 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8B0C4EE62A23DCFB00AFBEE7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8B3D13F82A23730000F0EF6E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B3D141D2A23D87500F0EF6E /* LaunchScreenStateManager.swift in Sources */,
 				8B3D14092A23730000F0EF6E /* Persistence.swift in Sources */,
 				8B3D14162A2375F200F0EF6E /* MainView.swift in Sources */,
 				8B3D14022A23730000F0EF6E /* ContentView.swift in Sources */,
+				8B0C4F462A23F16500AFBEE7 /* EmptyListView.swift in Sources */,
+				8B3D141B2A23D82700F0EF6E /* LaunchScreenStep.swift in Sources */,
 				8B3D14002A23730000F0EF6E /* TodosApp.swift in Sources */,
 				8B3D140C2A23730000F0EF6E /* Todos.xcdatamodeld in Sources */,
 				8B3D14142A23740D00F0EF6E /* AddTodoView.swift in Sources */,
+				8B3D141F2A23DA2D00F0EF6E /* LaunchScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
