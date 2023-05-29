@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8B0C4F462A23F16500AFBEE7 /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C4F452A23F16500AFBEE7 /* EmptyListView.swift */; };
 		8B0C4F4A2A25374100AFBEE7 /* AddTodoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C4F492A25374100AFBEE7 /* AddTodoButton.swift */; };
+		8B0C4F4E2A253BCC00AFBEE7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C4F4D2A253BCC00AFBEE7 /* SettingsView.swift */; };
+		8B0C4F502A253E8500AFBEE7 /* FormRowStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C4F4F2A253E8500AFBEE7 /* FormRowStaticView.swift */; };
+		8B0C4F522A25413C00AFBEE7 /* FormRowLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C4F512A25413C00AFBEE7 /* FormRowLinkView.swift */; };
 		8B3D14002A23730000F0EF6E /* TodosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D13FF2A23730000F0EF6E /* TodosApp.swift */; };
 		8B3D14042A23730000F0EF6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3D14032A23730000F0EF6E /* Assets.xcassets */; };
 		8B3D14072A23730000F0EF6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3D14062A23730000F0EF6E /* Preview Assets.xcassets */; };
@@ -24,6 +27,9 @@
 /* Begin PBXFileReference section */
 		8B0C4F452A23F16500AFBEE7 /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
 		8B0C4F492A25374100AFBEE7 /* AddTodoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoButton.swift; sourceTree = "<group>"; };
+		8B0C4F4D2A253BCC00AFBEE7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8B0C4F4F2A253E8500AFBEE7 /* FormRowStaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowStaticView.swift; sourceTree = "<group>"; };
+		8B0C4F512A25413C00AFBEE7 /* FormRowLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowLinkView.swift; sourceTree = "<group>"; };
 		8B3D13FC2A23730000F0EF6E /* Todos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3D13FF2A23730000F0EF6E /* TodosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosApp.swift; sourceTree = "<group>"; };
 		8B3D14032A23730000F0EF6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,8 +57,8 @@
 		8B0C4F482A2536DD00AFBEE7 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				8B0C4F452A23F16500AFBEE7 /* EmptyListView.swift */,
 				8B3D14152A2375F200F0EF6E /* MainView.swift */,
+				8B0C4F452A23F16500AFBEE7 /* EmptyListView.swift */,
 				8B0C4F492A25374100AFBEE7 /* AddTodoButton.swift */,
 			);
 			path = MainScreen;
@@ -64,6 +70,16 @@
 				8B3D14132A23740D00F0EF6E /* AddTodoView.swift */,
 			);
 			path = AddTodoScreen;
+			sourceTree = "<group>";
+		};
+		8B0C4F4C2A253B8B00AFBEE7 /* SettingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8B0C4F4D2A253BCC00AFBEE7 /* SettingsView.swift */,
+				8B0C4F4F2A253E8500AFBEE7 /* FormRowStaticView.swift */,
+				8B0C4F512A25413C00AFBEE7 /* FormRowLinkView.swift */,
+			);
+			path = SettingsScreen;
 			sourceTree = "<group>";
 		};
 		8B3D13F32A23730000F0EF6E = {
@@ -86,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				8B3D13FF2A23730000F0EF6E /* TodosApp.swift */,
+				8B0C4F4C2A253B8B00AFBEE7 /* SettingsScreen */,
 				8B3D14192A23D80500F0EF6E /* LaunchScreen */,
 				8B0C4F482A2536DD00AFBEE7 /* MainScreen */,
 				8B0C4F4B2A253B0800AFBEE7 /* AddTodoScreen */,
@@ -212,12 +229,15 @@
 				8B3D14092A23730000F0EF6E /* Persistence.swift in Sources */,
 				8B3D14162A2375F200F0EF6E /* MainView.swift in Sources */,
 				8B0C4F462A23F16500AFBEE7 /* EmptyListView.swift in Sources */,
+				8B0C4F522A25413C00AFBEE7 /* FormRowLinkView.swift in Sources */,
 				8B3D141B2A23D82700F0EF6E /* LaunchScreenStep.swift in Sources */,
 				8B0C4F4A2A25374100AFBEE7 /* AddTodoButton.swift in Sources */,
 				8B3D14002A23730000F0EF6E /* TodosApp.swift in Sources */,
 				8B3D140C2A23730000F0EF6E /* Todos.xcdatamodeld in Sources */,
 				8B3D14142A23740D00F0EF6E /* AddTodoView.swift in Sources */,
 				8B3D141F2A23DA2D00F0EF6E /* LaunchScreenView.swift in Sources */,
+				8B0C4F4E2A253BCC00AFBEE7 /* SettingsView.swift in Sources */,
+				8B0C4F502A253E8500AFBEE7 /* FormRowStaticView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

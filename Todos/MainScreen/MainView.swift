@@ -15,6 +15,7 @@ struct MainView: View {
 	@FetchRequest(entity: Item.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Item.name, ascending: true)], animation: .default)
 	private var items: FetchedResults<Item>
 	@State private var showingAddTodoView = false
+	@State private var showingSettingsView = false
 	@State private var animatingAddButton = false
 
     // MARK: - Body
@@ -39,11 +40,11 @@ struct MainView: View {
 					leading: EditButton(),
 					trailing:
 						Button(action: {
-							showingAddTodoView = true
+							showingSettingsView = true
 						}, label: {
-							Image(systemName: "plus")
+							Image(systemName: "gearshape")
 						})
-						.sheet(isPresented: $showingAddTodoView) { AddTodoView(showAddTodoView: $showingAddTodoView)}
+						.sheet(isPresented: $showingSettingsView) { SettingsView(showSettingsView: $showingSettingsView) }
 						.environment(\.managedObjectContext, managedObjectContext)
 				)
 				.onAppear {
