@@ -9,8 +9,11 @@ import SwiftUI
 
 struct EmptyListView: View {
 	// MARK: - Properties
+	/// Flag used to enable animation
 	@State private var isAnimating = false
+	/// Collection of images to show randomly
 	let images = ["illustration-no1", "illustration-no2", "illustration-no3"]
+	/// Collection of tips to show randomly
 	let tips = [
 		"Use your time wisely",
 		"Slow and steady wins the race",

@@ -14,16 +14,20 @@ struct AddTodoView: View {
 	@State private var name: String = ""
 	@State private var priority: String = "Normal"
 	@State private var errorShowing = false
-	@State private var errorTitle = ""
-	@State private var errorMessage = ""
+	var errorTitle = "Invalid Input"
+	var errorMessage = "Make sure to add something to the Todo title"
 	let priorities = ["Hight", "Normal", "Low"]
 
 	// MARK: - Body
     var body: some View {
 		NavigationView {
 			VStack {
-				Form {
+				VStack(alignment: .leading, spacing: 20) {
 					TextField("Todo", text: $name)
+						.padding()
+						.background(Color(UIColor.tertiarySystemFill))
+						.cornerRadius(9)
+						.font(.system(size: 24, weight: .bold, design: .default))
 
 					Picker("Priority", selection: $priority) {
 						ForEach(priorities, id: \.self) {
@@ -42,17 +46,23 @@ struct AddTodoView: View {
 							} catch {
 								print("Error saving todo with error: \(error)")
 							}
+							showAddTodoView = false
 						} else {
 							errorShowing = true
-							errorTitle = "Invalid Name"
-							errorMessage = "Make sure to add something to the Todo title"
 						}
-						showAddTodoView = false
 					} label: {
 						Text("Save")
+							.font(.system(size: 24, weight: .bold, design: .default))
+							.padding()
+							.frame(minWidth: 0, maxWidth: .infinity)
+							.background(Color.blue)
+							.cornerRadius(9)
+							.foregroundColor(.white)
 					}
 
 				}
+				.padding(.horizontal)
+				.padding(.vertical, 30)
 
 				Spacer()
 			}
