@@ -92,6 +92,9 @@ struct MainView: View {
 		}
 	}
 
+	/// Updates todo items priority color.
+	/// - Parameter priority: priority of the todo item
+	/// - Returns: color based on priority
 	private func colorize(priority: String) -> Color {
 		switch priority {
 		case "Hight":

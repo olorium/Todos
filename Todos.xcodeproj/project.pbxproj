@@ -48,6 +48,7 @@
 		8BE26DDE2A2BB99B005794B8 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 		8BE26DE02A2BB9FA005794B8 /* ThemeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeData.swift; sourceTree = "<group>"; };
 		8BE26DE22A2BBA30005794B8 /* ThemeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSettings.swift; sourceTree = "<group>"; };
+		8BE26DE42A2BC50A005794B8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 		8B3D13F32A23730000F0EF6E = {
 			isa = PBXGroup;
 			children = (
+				8BE26DE42A2BC50A005794B8 /* README.md */,
 				8B3D13FE2A23730000F0EF6E /* Todos */,
 				8B3D13FD2A23730000F0EF6E /* Products */,
 			);
