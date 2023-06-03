@@ -44,7 +44,6 @@ struct FormRowLinkView: View {
 					.font(.system(size: 14, weight: .semibold, design: .rounded))
 					.accentColor(Color(.systemGray2))
 			}
-
 		}
     }
 }

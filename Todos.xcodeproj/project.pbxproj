@@ -22,6 +22,9 @@
 		8B3D141B2A23D82700F0EF6E /* LaunchScreenStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D141A2A23D82700F0EF6E /* LaunchScreenStep.swift */; };
 		8B3D141D2A23D87500F0EF6E /* LaunchScreenStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D141C2A23D87500F0EF6E /* LaunchScreenStateManager.swift */; };
 		8B3D141F2A23DA2D00F0EF6E /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D141E2A23DA2D00F0EF6E /* LaunchScreenView.swift */; };
+		8BE26DDF2A2BB99B005794B8 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE26DDE2A2BB99B005794B8 /* ThemeModel.swift */; };
+		8BE26DE12A2BB9FA005794B8 /* ThemeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE26DE02A2BB9FA005794B8 /* ThemeData.swift */; };
+		8BE26DE32A2BBA30005794B8 /* ThemeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE26DE22A2BBA30005794B8 /* ThemeSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,10 @@
 		8B3D141A2A23D82700F0EF6E /* LaunchScreenStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenStep.swift; sourceTree = "<group>"; };
 		8B3D141C2A23D87500F0EF6E /* LaunchScreenStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenStateManager.swift; sourceTree = "<group>"; };
 		8B3D141E2A23DA2D00F0EF6E /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		8B8D890B2A27C8D30053895A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8BE26DDE2A2BB99B005794B8 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
+		8BE26DE02A2BB9FA005794B8 /* ThemeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeData.swift; sourceTree = "<group>"; };
+		8BE26DE22A2BBA30005794B8 /* ThemeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +108,9 @@
 		8B3D13FE2A23730000F0EF6E /* Todos */ = {
 			isa = PBXGroup;
 			children = (
+				8B8D890B2A27C8D30053895A /* Info.plist */,
 				8B3D13FF2A23730000F0EF6E /* TodosApp.swift */,
+				8BE26DDD2A2BB96C005794B8 /* Theme */,
 				8B0C4F4C2A253B8B00AFBEE7 /* SettingsScreen */,
 				8B3D14192A23D80500F0EF6E /* LaunchScreen */,
 				8B0C4F482A2536DD00AFBEE7 /* MainScreen */,
@@ -130,6 +139,16 @@
 				8B3D141E2A23DA2D00F0EF6E /* LaunchScreenView.swift */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		8BE26DDD2A2BB96C005794B8 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				8BE26DDE2A2BB99B005794B8 /* ThemeModel.swift */,
+				8BE26DE02A2BB9FA005794B8 /* ThemeData.swift */,
+				8BE26DE22A2BBA30005794B8 /* ThemeSettings.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,11 +246,14 @@
 			files = (
 				8B3D141D2A23D87500F0EF6E /* LaunchScreenStateManager.swift in Sources */,
 				8B3D14092A23730000F0EF6E /* Persistence.swift in Sources */,
+				8BE26DE32A2BBA30005794B8 /* ThemeSettings.swift in Sources */,
 				8B3D14162A2375F200F0EF6E /* MainView.swift in Sources */,
 				8B0C4F462A23F16500AFBEE7 /* EmptyListView.swift in Sources */,
 				8B0C4F522A25413C00AFBEE7 /* FormRowLinkView.swift in Sources */,
 				8B3D141B2A23D82700F0EF6E /* LaunchScreenStep.swift in Sources */,
+				8BE26DE12A2BB9FA005794B8 /* ThemeData.swift in Sources */,
 				8B0C4F4A2A25374100AFBEE7 /* AddTodoButton.swift in Sources */,
+				8BE26DDF2A2BB99B005794B8 /* ThemeModel.swift in Sources */,
 				8B3D14002A23730000F0EF6E /* TodosApp.swift in Sources */,
 				8B3D140C2A23730000F0EF6E /* Todos.xcdatamodeld in Sources */,
 				8B3D14142A23740D00F0EF6E /* AddTodoView.swift in Sources */,
@@ -369,6 +391,7 @@
 				DEVELOPMENT_TEAM = R55SB7N5G9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Todos/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -398,6 +421,7 @@
 				DEVELOPMENT_TEAM = R55SB7N5G9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Todos/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

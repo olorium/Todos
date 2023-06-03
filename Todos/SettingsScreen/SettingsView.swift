@@ -9,13 +9,40 @@ import SwiftUI
 
 struct SettingsView: View {
 	// MARK: - Properties
+	@ObservedObject var theme = ThemeSettings.shared
 	@Binding var showSettingsView: Bool
+	let themes = ThemeData.themes
 
 	// MARK: - Body
     var body: some View {
 		NavigationView {
 			VStack(alignment: .center, spacing: 0) {
 				Form {
+					Section(header:
+						HStack {
+							Text("Choose the app theme")
+						Image(systemName: "circle.fill")
+							.resizable()
+							.frame(width: 15, height: 15)
+							.foregroundColor(themes[self.theme.themeSettings].themeColor)
+						}
+					) {
+						List {
+							ForEach(themes) { theme in
+								Button {
+									self.theme.themeSettings = theme.id
+								} label: {
+									HStack {
+										Image(systemName: "circle.fill")
+											.foregroundColor(theme.themeColor)
+										Text(theme.themeName)
+									}
+								}
+								.accentColor(.primary)
+							}
+						}
+					}.padding(.vertical, 3)
+
 					Section(header: Text("Follow us")) {
 						FormRowLinkView(icon: "globe", color: .green, title: "Website", link: "https://apple.com")
 						FormRowLinkView(icon: "link", color: .blue, title: "Twitter", link: "https://apple.com")
@@ -53,6 +80,8 @@ struct SettingsView: View {
 			.navigationBarTitleDisplayMode(.inline)
 			.background(Color("ColorBackground").edgesIgnoringSafeArea(.all))
 		}
+		.accentColor(themes[self.theme.themeSettings].themeColor)
+		.navigationViewStyle(.stack)
     }
 }
 

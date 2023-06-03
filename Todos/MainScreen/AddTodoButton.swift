@@ -13,17 +13,19 @@ struct AddTodoButton: View {
 	@State private var animatingAddButton = false
 	/// Binding to define `AddTodoView` is showing
 	@Binding var showingAddTodoView: Bool
+	/// The current theme color.
+	let themeColor: Color
 
 	var body: some View {
 		ZStack {
 			Group {
 				Circle()
-					.fill(Color.blue)
+					.fill(themeColor)
 					.opacity(animatingAddButton ? 0.2 : 0)
 					.scaleEffect(animatingAddButton ? 1 : 0)
 					.frame(width: 68, height: 68, alignment: .center)
 				Circle()
-					.fill(Color.blue)
+					.fill(themeColor)
 					.opacity(animatingAddButton ? 0.15 : 0)
 					.scaleEffect(animatingAddButton ? 1 : 0)
 					.frame(width: 88, height: 88, alignment: .center)
@@ -39,6 +41,7 @@ struct AddTodoButton: View {
 					.background(Circle().fill(Color("ColorBase")))
 					.frame(width: 48, height: 48, alignment: .center)
 			})
+			.accentColor(themeColor)
 			.onAppear { animatingAddButton.toggle() }
 		}
 		.padding(.bottom, 15)
@@ -49,6 +52,6 @@ struct AddTodoButton: View {
 
 struct AddTodoButton_Previews: PreviewProvider {
 	static var previews: some View {
-		AddTodoButton(showingAddTodoView: .constant(false))
+		AddTodoButton(showingAddTodoView: .constant(false), themeColor: .red)
 	}
 }

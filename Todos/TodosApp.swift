@@ -9,8 +9,8 @@ import SwiftUI
 
 @main
 struct TodosApp: App {
-	@StateObject var launchScreenState = LaunchScreenStateManager()
-	
+	@StateObject private var launchScreenState = LaunchScreenStateManager()
+
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
@@ -22,7 +22,8 @@ struct TodosApp: App {
 				if launchScreenState.state != .finished {
 					LaunchScreenView()
 				}
-			}.environmentObject(launchScreenState)
+			}
+			.environmentObject(launchScreenState)
         }
     }
 }

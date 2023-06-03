@@ -10,6 +10,7 @@ import SwiftUI
 struct AddTodoView: View {
 	// MARK: - Properties
 	@Environment(\.managedObjectContext) var managedObjectContext
+	@ObservedObject var theme = ThemeSettings.shared
 	@Binding var showAddTodoView: Bool
 	@State private var name: String = ""
 	@State private var priority: String = "Normal"
@@ -17,6 +18,7 @@ struct AddTodoView: View {
 	var errorTitle = "Invalid Input"
 	var errorMessage = "Make sure to add something to the Todo title"
 	let priorities = ["Hight", "Normal", "Low"]
+	let themes = ThemeData.themes
 
 	// MARK: - Body
     var body: some View {
@@ -55,7 +57,7 @@ struct AddTodoView: View {
 							.font(.system(size: 24, weight: .bold, design: .default))
 							.padding()
 							.frame(minWidth: 0, maxWidth: .infinity)
-							.background(Color.blue)
+							.background(themes[self.theme.themeSettings].themeColor)
 							.cornerRadius(9)
 							.foregroundColor(.white)
 					}
@@ -76,6 +78,8 @@ struct AddTodoView: View {
 				Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("Ok")))
 			}
 		}
+		.accentColor(themes[self.theme.themeSettings].themeColor)
+		.navigationViewStyle(.stack)
     }
 }
 
